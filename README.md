@@ -8,6 +8,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 The following packages are required:
 
    - xmonad
+   - fish
    - suckless-tools
    - feh
    - xscreensaver
