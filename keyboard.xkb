@@ -1,0 +1,58 @@
+xkb_keymap {
+  xkb_keycodes {
+    include "evdev"
+    <BACK> = 214;
+    <FRWD> = 216;
+    <PREV> = 217;
+    <NEXT> = 218;
+  };
+  xkb_types { include "complete" };
+  xkb_compat {
+    include "complete"
+    interpret Control_L { action = SetControls(controls=overlay1+mousekeys); };
+    interpret Control_R { action = SetControls(controls=overlay1+mousekeys); };
+  };
+  xkb_symbols {
+    // Based on dvorak. Include any media keys present.
+    include "pc+us(dvorak)+inet(evdev)"
+
+    // Modifiers:
+    // - caps lock is control
+    // - control keys trigger "extend" overlay
+    // - left alt is backspace
+    replace key <CAPS> { [Caps_Lock], actions=[SetMods(modifiers=Control)] };
+    replace key <LALT> { [BackSpace] };
+    replace modifier_map Control { <CAPS> };
+    key <LCTL> { overlay1=<LCTL> };
+    key <RCTL> { overlay1=<RCTL> };
+
+    // Right overlay cluster:
+    //  - Arrows
+    //  - Home/End
+    key <AD07> { overlay1=<HOME> };
+    key <AD08> { overlay1=<UP> };
+    key <AD09> { overlay1=<END> };
+    key <AC07> { overlay1=<LEFT> };
+    key <AC08> { overlay1=<DOWN> };
+    key <AC09> { overlay1=<RGHT> };
+
+    // Left overlay cluster:
+    //  - Browser back/forward
+    //  - Page Up/Down
+    //  - App left/right
+    key <AC02> { overlay1=<BACK> };
+    key <AC04> { overlay1=<FRWD> };
+    key <AC03> { overlay1=<PGDN> };
+    key <AD03> { overlay1=<PGUP> };
+    key <BACK> { [XF86Back] };
+    key <FRWD> { [XF86Forward] };
+    key <AD02> { overlay1=<PREV> };
+    key <AD04> { overlay1=<NEXT> };
+    key <PREV> { [XF86ApplicationLeft] };
+    key <NEXT> { [XF86ApplicationRight] };
+
+    // Disable keys for training.
+    replace key <BKSP> { [NoSymbol] };
+  };
+  xkb_geometry { include "pc(pc105)" };
+};
