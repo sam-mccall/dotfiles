@@ -16,6 +16,7 @@ The following packages are required:
    - xmobar
    - sakura
    - xbacklight
+   - xss-lock
 
 And custom installs:
 
