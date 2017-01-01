@@ -17,3 +17,4 @@ The following packages are required:
 And custom installs:
 
    - [xcape](https://github.com/alols/xcape)
+   - ~/background.jpg
