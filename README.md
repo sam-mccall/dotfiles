@@ -17,8 +17,8 @@ The following packages are required:
    - sakura
    - xbacklight
    - xss-lock
+   - xcape
 
 And custom installs:
 
-   - [xcape](https://github.com/alols/xcape)
    - ~/background.jpg
