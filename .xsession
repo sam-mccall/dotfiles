@@ -1,3 +1,4 @@
+export PATH="$PATH:$HOME/bin"
 xrandr --dpi 120 # TODO: Laptop-only?
 xkbcomp $HOME/keyboard.xkb $DISPLAY
 xscreensaver -no-splash &

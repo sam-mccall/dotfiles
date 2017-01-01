@@ -1,0 +1,7 @@
+#!/bin/sh
+result=`nmcli -t -f name c status`
+if [[ -n $result ]]; then
+  echo "($result)"
+else
+  echo "offline"
+fi

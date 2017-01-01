@@ -13,6 +13,9 @@ The following packages are required:
    - feh
    - xscreensaver
    - stalonetray
+   - xmobar
+   - sakura
+   - xbacklight
 
 And custom installs:
 
