@@ -5,7 +5,7 @@ Config { font = "xft:Open Sans:size=12:bold"
        , lowerOnStart = True
        , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run DynNetwork ["-t","Net: ↑<tx> ↓<rx> Kbps","-L","3","-H","100","--normal","green","--high","red"] 10
-                    , Run Battery ["-t","<left>% (<timeleft>)"] 10
+                    , Run Battery ["-t","<acstatus><left>% (<timeleft>)","--","-O","⚡","-o","","-i","⚡"] 10
     		    , Run Date "%a %Y-%m-%d %H:%M" "date" 100
                     , Run Com "wifi_status" [] "wifi_status" 10
                     , Run StdinReader

@@ -22,3 +22,11 @@ The following packages are required:
 And custom installs:
 
    - ~/background.jpg
+
+Vim setup requires:
+  - [pathogen](https://github.com/tpope/vim-pathogen)
+  - vim-monokai
+  - vim-airline
+  - nerdtree
+  - vim-bbye
+  - vim-fish
