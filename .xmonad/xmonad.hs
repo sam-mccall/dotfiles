@@ -10,9 +10,8 @@ import System.IO
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    displayVar <- getEnv "DISPLAY"
     xmonad $ ewmh defaultConfig
-        { modMask = if displayVar == ":20" then mod1Mask else mod4Mask
+        { modMask = mod4Mask
         , terminal = "sakura"
         , manageHook = manageDocks <+> manageHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
