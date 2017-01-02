@@ -2,3 +2,4 @@ xcape -t 200 -e "Caps_Lock=Escape;Shift_L=Shift_L|parenleft;Shift_R=Shift_R|pare
 xinput set-prop "Kensington Kensington Slimblade Trackball" "Evdev Wheel Emulation" 1
 xinput set-prop "Kensington Kensington Slimblade Trackball" "Evdev Wheel Emulation Button" 8
 xinput set-prop "Kensington Kensington Slimblade Trackball" "Evdev Wheel Emulation Axes" 6 7 4 5
+synclient TouchpadOff=1

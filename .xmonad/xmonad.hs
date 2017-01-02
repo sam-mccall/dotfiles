@@ -31,4 +31,5 @@ main = do
         , ("<XF86AudioMicMute>", spawn "pactl set-source-mute @DEFAULT_SOURCE@ -- toggle")
         , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 20")
         , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 20")
+        , ("<XF86Tools>", spawn "toggle_touchpad")
         ]
