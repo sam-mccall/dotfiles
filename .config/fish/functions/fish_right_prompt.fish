@@ -9,7 +9,13 @@ function _compressed_path
 end
 
 function fish_right_prompt
-  _compressed_path (string replace -r "^$HOME" '~' $PWD)
+  if functions -q vcinfo; and set -l vc (vcinfo)
+    set_color c80
+    echo $vc[1]:
+    _compressed_path $vc[2]
+  else
+    _compressed_path (string replace -r "^$HOME" '~' $PWD)
+  end
   set_color 888
   date +" %k:%M"
   set_color normal
