@@ -4,7 +4,7 @@ Config { font = "xft:Open Sans:size=12:bold"
        , position = Bottom
        , lowerOnStart = True
        , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
-                    , Run Network "wlan0" ["-t","Net: <tx>/<rx>","-L","3","-H","100","--normal","green","--high","red"] 10
+                    , Run DynNetwork ["-t","Net: ↑<tx> ↓<rx> Kbps","-L","3","-H","100","--normal","green","--high","red"] 10
                     , Run Battery ["-t","<left>% (<timeleft>)"] 10
     		    , Run Date "%a %Y-%m-%d %H:%M" "date" 100
                     , Run Com "wifi_status" [] "wifi_status" 10
@@ -12,6 +12,6 @@ Config { font = "xft:Open Sans:size=12:bold"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }%cpu% | %wlan0% %wifi_status% {%battery% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }%cpu% | %dynnetwork% %wifi_status% {%battery% | <fc=#ee9a00>%date%</fc>"
        }
 
