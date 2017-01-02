@@ -12,7 +12,7 @@ main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ ewmh defaultConfig
         { modMask = mod4Mask
-        , terminal = "sakura"
+        , terminal = "urxvt"
         , manageHook = manageDocks <+> manageHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc

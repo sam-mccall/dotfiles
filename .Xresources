@@ -1,0 +1,45 @@
+! Terminal colors
+*.foreground:   #eaeaea
+*.background:   #000000
+*.cursorColor:  #aeafad
+! Black / Grey
+*.color0:       #000000
+*.color8:       #666666
+! Red / Bright Red
+*.color1:       #d54e53
+*.color9:       #FF3334
+! Green + Bright Green
+*.color2:       #b9ca4a
+*.color10:      #9ec400
+! Yellow (Orange) + Bright Yellow (Yellow)
+*.color3:       #e78c45
+*.color11:      #e7c547
+! Blue + Bright Blue
+*.color4:       #7aa6da
+*.color12:      #7aa6da
+! Magenta (Purple) + Bright Magenta
+*.color5:       #c397d8
+*.color13:      #b777e0
+! Cyan (Aqua) + Bright Cyan
+*.color6:       #70c0b1
+*.color14:      #54ced6
+! Light Grey (Selection) + White (Current Line)
+*.color7:       #424242
+*.color15:      #2a2a2a
+
+URxvt*depth: 32
+URxvt*scrollBar: none
+URxvt.iso14755: false
+URxvt*borderLess: false
+URxvt*letterSpace: -1
+URxvt*font: xft:Source Code Pro:antialias=true:pixelsize=16
+URxvt*boldFont: xft:Source Code Pro:style=bold:antialias=true:pixelsize=16
+URxvt*italicFont: xft:Source Code Pro:style=italic:antialias=true:pixelsize=16
+URxvt*boldItalicFont: xft:Source Code Pro:style=bolditalic:antialias=true:pixelsize=16
+URxvt*termName: rxvt-unicode-256color
+XTerm*termName: xterm-256color
+
+Xft.antialias:                 true
+Xft.hinting:                   true
+Xft.hintstyle:                 hintslight
+Xft.rgba:                      rgb

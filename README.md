@@ -14,7 +14,7 @@ The following packages are required:
    - xscreensaver
    - stalonetray
    - xmobar
-   - sakura
+   - rxvt-unicode
    - xbacklight
    - xss-lock
    - xcape
@@ -22,6 +22,7 @@ The following packages are required:
 And custom installs:
 
    - ~/background.jpg
+   - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
 
 Vim setup requires:
   - [pathogen](https://github.com/tpope/vim-pathogen)
