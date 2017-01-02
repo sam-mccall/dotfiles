@@ -23,6 +23,7 @@ And custom installs:
 
    - ~/background.jpg
    - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+   - [re-search](https://github.com/jbonjean/re-search)
 
 Vim setup requires:
   - [pathogen](https://github.com/tpope/vim-pathogen)
