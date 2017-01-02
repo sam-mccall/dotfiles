@@ -32,10 +32,10 @@ URxvt*scrollBar: none
 URxvt.iso14755: false
 URxvt*borderLess: false
 URxvt*letterSpace: -1
-URxvt*font: xft:Source Code Pro:antialias=true:pixelsize=16
-URxvt*boldFont: xft:Source Code Pro:style=bold:antialias=true:pixelsize=16
-URxvt*italicFont: xft:Source Code Pro:style=italic:antialias=true:pixelsize=16
-URxvt*boldItalicFont: xft:Source Code Pro:style=bolditalic:antialias=true:pixelsize=16
+URxvt*font: xft:Source Code Pro-12:antialias=true
+URxvt*boldFont: xft:Source Code Pro-12:style=bold:antialias=true
+URxvt*italicFont: xft:Source Code Pro-12:style=italic:antialias=true
+URxvt*boldItalicFont: xft:Source Code Pro-12:style=bolditalic:antialias=true
 URxvt*termName: rxvt-unicode-256color
 XTerm*termName: xterm-256color
 
