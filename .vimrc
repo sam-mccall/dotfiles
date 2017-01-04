@@ -19,7 +19,7 @@ set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set expandtab tabstop=2 shiftwidth=2 softtabstop=2 smarttab
-set list listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+set list listchars=tab:▸\ ,trail:·,extends:>,precedes:<
 set formatoptions+=j
 set nowrap
 set directory=/dev/shm
