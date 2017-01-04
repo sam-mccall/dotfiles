@@ -43,3 +43,6 @@ Xft.antialias:                 true
 Xft.hinting:                   true
 Xft.hintstyle:                 hintslight
 Xft.rgba:                      rgb
+
+urxvt*perl-ext-common:        default,matcher
+
