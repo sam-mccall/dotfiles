@@ -14,6 +14,7 @@ end
 set colorcolumn=80,100 cursorline
 set textwidth=80
 set number
+set scrolloff=10
 set timeoutlen=1000 ttimeoutlen=10
 set autoindent
 set backspace=indent,eol,start
@@ -40,8 +41,17 @@ nnoremap <C-C> :Bd<CR>
 nnoremap <C-S-C> :Bd!<CR>
 nnoremap <leader>f :find 
 
+" Prior/Next in tmux
+noremap [5;5~ :bp<CR>
+noremap [6;5~ :bn<CR>
+" Prior/Next outside tmux
+noremap [5^ :bp<CR>
+noremap [6^ :bn<CR>
 noremap <C-Left> :bp<CR>
 noremap <C-Right> :bn<CR>
+
+noremap [1;2D <C-O>
+noremap [1;2C <C-I>
 
 " Highlighting {{{1
 let g:go_highlight_methods = 1
