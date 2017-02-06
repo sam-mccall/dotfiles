@@ -39,6 +39,9 @@ URxvt*boldItalicFont: xft:Source Code Pro-12:style=bolditalic:antialias=true
 URxvt*termName: rxvt-unicode-256color
 XTerm*termName: xterm-256color
 
+URxvt.keysym.XF86Back: \033[1;2D
+URxvt.keysym.XF86Forward: \033[1;2C
+
 Xft.antialias:                 true
 Xft.hinting:                   true
 Xft.hintstyle:                 hintslight

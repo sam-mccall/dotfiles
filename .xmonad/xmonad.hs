@@ -25,6 +25,7 @@ main = do
         [ ("M-S-l", spawn "xscreensaver-command -l")
         , ("M-p", spawn "dmenu_run -fn 'Open Sans-18'")
         , ("M-g", spawn "google-chrome")
+        , ("M-t", spawn "urxvt")
         , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -- '-5%'")
         , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -- '+5%'")
         , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ -- toggle")
