@@ -5,6 +5,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Util.EZConfig
+import XMonad.StackSet
 import System.Environment
 import System.IO
 
@@ -26,6 +27,7 @@ main = do
         , ("M-p", spawn "dmenu_run -fn 'Open Sans-18'")
         , ("M-g", spawn "google-chrome")
         , ("M-t", spawn "urxvt")
+        , ("M-S-t", withFocused $ windows . sink)
         , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -- '-5%'")
         , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -- '+5%'")
         , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ -- toggle")
