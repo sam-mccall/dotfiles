@@ -1,23 +1,25 @@
+function _arrow
+  set_color -b $argv
+  echo -n 
+  set_color $argv
+end
+
 function fish_prompt
   set -l ss $status
-  set -l cursor \U25ba
-  if [ $fish_key_bindings = "fish_vi_key_bindings" ]
-    switch $fish_bind_mode
-      case default
-        set cursor \U2605
-      case replace-one
-        set_color black -b green
-        echo -n 'R'
-      case visual
-        set cursor \U2423
-    end
+  if [ $status != 0 ]
+    set_color black
+    _arrow brred
+    _arrow yellow
+    _arrow brred
+    _arrow black
+  else if true
+    set_color black
+    _arrow red
+    _arrow bryellow
+    _arrow blue
+    _arrow black
   end
-  if [ $ss != 0 ]
-    set_color f00
-  else
-    set_color ff0
-  end
-	echo -n $cursor' '
-	set_color normal
+  echo -n ' '
+  set_color normal
 end
 
