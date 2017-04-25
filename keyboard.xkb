@@ -10,7 +10,6 @@ xkb_keymap {
   xkb_compat {
     include "complete"
     interpret Control_L { action = SetControls(controls=overlay1+mousekeys); };
-    interpret Control_R { action = SetControls(controls=overlay1+mousekeys); };
   };
   xkb_symbols {
     // Based on dvorak. Include any media keys present.
@@ -23,8 +22,8 @@ xkb_keymap {
     replace key <CAPS> { [Caps_Lock], actions=[SetMods(modifiers=Control)] };
     replace key <LALT> { [BackSpace] };
     replace modifier_map Control { <CAPS> };
-    key <LCTL> { overlay1=<LCTL> };
-    key <RCTL> { overlay1=<RCTL> };
+    key <SPCE> { [Control_L], overlay1=<SPCE> };
+    key <LCTL> { [space] };
 
     // Right overlay cluster:
     //  - Arrows
