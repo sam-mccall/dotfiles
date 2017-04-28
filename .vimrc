@@ -11,8 +11,12 @@ if &term =~ "^screen"
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 end
+" Change cursor shape based on mode.
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
 set colorcolumn=80,100 cursorline
-set textwidth=80
+set textwidth=0
 set number
 set scrolloff=10
 set timeoutlen=1000 ttimeoutlen=10
@@ -24,6 +28,7 @@ set list listchars=tab:▸\ ,trail:·,extends:>,precedes:<
 set formatoptions+=j
 set nowrap
 set directory=/dev/shm
+set nosol
 
 set ignorecase smartcase
 set incsearch hlsearch
@@ -96,6 +101,7 @@ if argc() == 1
     autocmd vimenter * wincmd p
     autocmd vimenter * Bd
   else
+    exe 'autocmd' 'vimenter' '*' 'NERDTree' fnamemodify(argv(0), ':h')
     autocmd vimenter * NERDTreeFind
     autocmd vimenter * wincmd l
   endif
