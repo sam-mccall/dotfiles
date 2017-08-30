@@ -1,5 +1,5 @@
 #!/bin/sh
-result=`nmcli -t -f name c status`
+result=`iwgetid -s`
 if [[ -n $result ]]; then
   echo "($result)"
 else

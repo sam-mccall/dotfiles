@@ -18,6 +18,7 @@ The following packages are required:
    - xbacklight
    - xss-lock
    - xcape
+   - wireless-tools
 
 And custom installs:
 
