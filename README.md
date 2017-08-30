@@ -14,7 +14,7 @@ The following packages are required:
    - xscreensaver
    - stalonetray
    - xmobar
-   - rxvt-unicode
+   - rxvt-unicode-256color
    - xbacklight
    - xss-lock
    - xcape
