@@ -10,7 +10,7 @@ import System.Environment
 import System.IO
 
 main = do
-    xmproc <- spawnPipe "xmobar"
+    xmproc <- spawnPipe "xmobar -d"
     xmonad $ ewmh defaultConfig
         { modMask = mod4Mask
         , terminal = "urxvt"
