@@ -117,6 +117,14 @@ let NERDTreeMinimalUI = 1
 let NERDTreeAutoCenter = 1
 let NERDTreeChDirMode = 2
 
+" Signify {{{1
+let g:signify_sign_show_count = 0
+let g:signify_sign_add = '＋'
+let g:signify_sign_delete = '－'
+let g:signify_sign_delete_first_line = '－'
+let g:signify_sign_change = '～'
+let g:signify_sign_changedelete = '＊'
+
 " Custom binds {{{1
 let mapleader=","
 autocmd FileType vim setlocal foldmethod=marker

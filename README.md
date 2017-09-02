@@ -33,3 +33,4 @@ Vim setup requires:
   - nerdtree
   - vim-bbye
   - vim-fish
+  - vim-signify
