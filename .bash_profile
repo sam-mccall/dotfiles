@@ -10,6 +10,6 @@ if [[ -e "$HOME/.bash_profile.local" ]]; then
   source "$HOME/.bash_profile.local"
 fi
 # Run fish if this is an interactive session not inside fish already.
-if echo $- | grep -q 'i' && [[ "$(ps -o comm= $PPID)" != "fish" ]] && [[ -x /usr/bin/fish ]]; then
+if echo $- | grep -q 'i' && [[ "$(ps -o comm= $PPID)" != "fish" ]] && [[ -x /usr/bin/fish ]] && [[ -z "$NOFISH" ]]; then
   exec /usr/bin/fish -i
 fi

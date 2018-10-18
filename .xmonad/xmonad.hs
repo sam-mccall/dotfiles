@@ -11,7 +11,7 @@ import System.IO
 
 main = do
     xmproc <- spawnPipe "xmobar -d"
-    xmonad $ ewmh defaultConfig
+    xmonad $ docks $ ewmh defaultConfig
         { modMask = mod4Mask
         , terminal = "urxvt"
         , manageHook = manageDocks <+> manageHook defaultConfig

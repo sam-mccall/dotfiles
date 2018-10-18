@@ -22,7 +22,6 @@ xkb_keymap {
     replace key <CAPS> { [Caps_Lock], actions=[SetMods(modifiers=Control)] };
     replace key <LALT> { [BackSpace] };
     replace modifier_map Control { <CAPS> };
-    key <SPCE> { [Control_L], overlay1=<SPCE> };
     key <LCTL> { [space] };
 
     // Right overlay cluster:
