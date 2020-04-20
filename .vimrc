@@ -68,7 +68,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\v\s+$/
 
 " Folding {{{1
-set foldmethod=syntax
+set foldmethod=indent
 autocmd BufWinEnter * normal zR
 let &fillchars = "vert:│,fold: "
 function! Strip(str)
@@ -135,3 +135,11 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+nnoremap <Leader>sd <Plug>(coc-definition)
+nnoremap <Leader>sr <Plug>(coc-references)
+nnoremap <Leader>sf <Plug>(coc-format-selected)
+nnoremap <Leader>sn <Plug>(coc-rename)
+nnoremap <Leader>sa <Plug>(coc-codeaction)
+nnoremap <silent> <Leader>sh :call CocAction('doHover')<cr>
+autocmd CursorHold * silent call CocActionAsync('highlight')
