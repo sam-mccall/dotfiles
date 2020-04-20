@@ -141,7 +141,16 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>sf :ClangFormat<CR>
 
+nnoremap <Leader>sd <Plug>(coc-definition)
+nnoremap <Leader>sr <Plug>(coc-references)
+nnoremap <Leader>sf <Plug>(coc-format-selected)
+nnoremap <Leader>sn <Plug>(coc-rename)
+nnoremap <Leader>sa <Plug>(coc-codeaction)
+nnoremap <silent> <Leader>sh :call CocAction('doHover')<cr>
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " Per-machine customizations
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
