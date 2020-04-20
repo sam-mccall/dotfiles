@@ -4,12 +4,12 @@ execute pathogen#infect()
 colorscheme monokai
 set mouse=a
 if &term =~ "^screen"
-  set ttymouse=xterm2 " mouse drag in tmux
-    " tmux will send xterm-style keys when its xterm-keys option is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
+  set ttymouse=sgr " mouse drag in tmux. Not urxvt-compatible...
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
 end
 " Change cursor shape based on mode.
 let &t_SI = "\<Esc>[6 q"
@@ -29,6 +29,7 @@ set formatoptions+=j
 set nowrap
 set directory=/dev/shm
 set nosol
+let mapleader=','
 
 set ignorecase smartcase
 set incsearch hlsearch
@@ -44,7 +45,6 @@ set completeopt-=preview
 
 nnoremap <C-C> :Bd<CR>
 nnoremap <C-S-C> :Bd!<CR>
-nnoremap <leader>f :find 
 
 " Prior/Next in tmux
 noremap [5;5~ :bp<CR>
@@ -57,6 +57,10 @@ noremap <C-Right> :bn<CR>
 
 noremap [1;2D <C-O>
 noremap [1;2C <C-I>
+noremap <S-Left> <C-O>
+noremap <S-Right> <C-I>
+noremap <M-Left> <C-O>
+noremap <M-Right> <C-I>
 
 " Highlighting {{{1
 let g:go_highlight_methods = 1
@@ -66,9 +70,13 @@ filetype plugin indent on
 syntax on
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\v\s+$/
+highlight NoAbort ctermbg=52
+autocmd FileType vim call matchadd("NoAbort", '^\s*function.*(.*)\(.*abort\)\@!')
+
+highlight CocErrorLine ctermbg=52
 
 " Folding {{{1
-set foldmethod=syntax
+set foldmethod=indent
 autocmd BufWinEnter * normal zR
 let &fillchars = "vert:│,fold: "
 function! Strip(str)
@@ -131,6 +139,7 @@ let mapleader=","
 autocmd FileType vim setlocal foldmethod=marker
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>sf :ClangFormat<CR>
 
 " Per-machine customizations
 if filereadable(expand("~/.vimrc.local"))
