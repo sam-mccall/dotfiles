@@ -83,6 +83,7 @@ highlight folded ctermfg=252 ctermbg=238 guibg=green
 
 " Airline {{{1
 let g:airline_powerline_fonts = 1
+let g:airline_highlighting_cache = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set laststatus=2
@@ -111,7 +112,7 @@ else
   autocmd vimenter * wincmd p
 endif
 " Quit if only NERDtree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * nested if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 let NERDTreeMinimalUI = 1
 let NERDTreeAutoCenter = 1
