@@ -143,11 +143,18 @@ nnoremap <leader>sf :ClangFormat<CR>
 
 nnoremap <Leader>sd <Plug>(coc-definition)
 nnoremap <Leader>sr <Plug>(coc-references)
-nnoremap <Leader>sf <Plug>(coc-format-selected)
 nnoremap <Leader>sn <Plug>(coc-rename)
 nnoremap <Leader>sa <Plug>(coc-codeaction)
 nnoremap <silent> <Leader>sh :call CocAction('doHover')<cr>
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Custom colors {{{1
+hi Comment ctermfg=179
+hi CocFloating ctermbg=236
+hi CocErrorFloat ctermfg=210
+hi CocWarningFloat ctermfg=11
+hi LspCxxHlGroupNamespace ctermfg=1;
+hi LspCxxHlGroupMemberVariable ctermfg=6;
 
 " Per-machine customizations
 if filereadable(expand("~/.vimrc.local"))
