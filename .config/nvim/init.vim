@@ -47,5 +47,5 @@ smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)':'<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)':'<Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)':'<Tab>'
 
-nnoremap <C-PageUp> :TablineBufferPrevious<CR>
-nnoremap <C-PageDown> :TablineBufferNext<CR>
+nnoremap <C-PageUp> :bn<CR>
+nnoremap <C-PageDown> :bp<CR>

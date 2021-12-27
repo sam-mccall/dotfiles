@@ -88,7 +88,7 @@ require('packer').startup(function()
     config = function()
       require('lualine').setup {
         options = {
-          theme = 'onedark',
+          theme = 'ayu_dark',
           disabled_filetypes = {'NvimTree','packer'},
         },
         sections = {
@@ -106,17 +106,20 @@ require('packer').startup(function()
           end},
           lualine_z = {'progress', 'location'},
         },
+        tabline = {
+          lualine_a = {'buffers'},
+        },
       }
     end
   }
 
-  use {'kdheepak/tabline.nvim',
+  use {'nvim-treesitter/nvim-treesitter',
     config = function()
-      require('tabline').setup {
-        options = {
-          show_tabs_always = false,
-          show_filename_only = true,
-        }
+      require('nvim-treesitter').setup {
+        ensure_installed = {"c", "cpp"},
+        highlight = {
+          enable = true,
+        },
       }
     end,
   }
