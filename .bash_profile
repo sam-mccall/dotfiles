@@ -1,5 +1,5 @@
 export PATH="$HOME/bin:$PATH"
-export EDITOR="vim"
+export EDITOR="nvim"
 export BROWSER=google-chrome
 
 # Sakura sets TERM=xterm, but actually is more like xterm-256color.
