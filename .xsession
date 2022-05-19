@@ -7,5 +7,7 @@ if [ -f "$HOME/.xsession.local" ]; then
   source "$HOME/.xsession.local"
 fi
 export _JAVA_AWT_WM_NONREPARENTING=1
+xrdb -merge ~/.Xresources
+xkbcomp $HOME/keyboard.xkb $DISPLAY
 exec i3
 
