@@ -13,3 +13,6 @@ fi
 if echo $- | grep -q 'i' && [[ "$(ps -o comm= $PPID)" != "fish" ]] && [[ -x /usr/bin/fish ]] && [[ -z "$NOFISH" ]]; then
   exec /usr/bin/fish -i
 fi
+if [[ -e "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+fi
