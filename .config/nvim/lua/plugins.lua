@@ -20,6 +20,7 @@ require('packer').startup(function()
           end
         },
         init_options = { clangdFileStatus = true },
+        cmd = {"clangd", "-log=verbose", "-pretty"},
       }
     end,
   }
