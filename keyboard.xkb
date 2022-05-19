@@ -17,12 +17,12 @@ xkb_keymap {
 
     // Modifiers:
     // - caps lock is control
-    // - control keys trigger "extend" overlay
+    // - control keys trigger "extend" overlay. FIXME: not working
     // - left alt is backspace
     replace key <CAPS> { [Caps_Lock], actions=[SetMods(modifiers=Control)] };
     replace key <LALT> { [BackSpace] };
     replace modifier_map Control { <CAPS> };
-    key <LCTL> { [space] };
+    key <LCTL> { [NoSymbol] };
 
     // Right overlay cluster:
     //  - Arrows
