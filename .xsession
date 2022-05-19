@@ -1,6 +1,3 @@
-if [ -f "$HOME/.xsession.local" ]; then
-  source "$HOME/.xsession.local"
-fi
 export PATH="$PATH:$HOME/bin"
 xscreensaver -no-splash &
 xss-lock -- xsecurelock &
