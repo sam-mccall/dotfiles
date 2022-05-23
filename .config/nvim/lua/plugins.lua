@@ -3,7 +3,21 @@ require('packer').startup(function()
 
   use {'neovim/nvim-lspconfig',
     config = function()
-      require('lspconfig').clangd.setup {
+      local lspconfig = require('lspconfig')
+      local on_attach = function(client, bufnr)
+        if client.supports_method('textDocument/documentHighlight') then
+          vim.cmd('autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()')
+          vim.cmd('autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()')
+          vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
+        end
+      end
+
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+      lspconfig.clangd.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
         handlers = {
           ['textDocument/clangd.fileStatus'] = function(err, result, ctx, cfg)
             local buf = vim.fn.bufnr(vim.uri_to_fname(result.uri))
@@ -20,8 +34,37 @@ require('packer').startup(function()
           end
         },
         init_options = { clangdFileStatus = true },
-        cmd = {"clangd", "-log=verbose", "-pretty"},
+        cmd = {os.getenv('CLANGD') or 'clangd', '-log=verbose', '-pretty'},
       }
+
+      local runtime_path = vim.split(package.path, ';')
+      table.insert(runtime_path, "lua/?.lua")
+      table.insert(runtime_path, "lua/?/init.lua")
+
+      lspconfig.sumneko_lua.setup {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            runtime = {
+              version = 'LuaJIT',
+              path = runtime_path,
+            },
+            diagnostics = { globals = {'vim'} },
+            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            -- Do not send telemetry data containing a randomized but unique identifier
+            telemetry = { enable = false },
+          },
+        },
+      }
+
+      lspconfig.tsserver.setup {
+        capabilities = capabilities,
+      }
+
+      lspconfig.cmake.setup {
+        capabilities = capabilities,
+      }
+
     end,
   }
 
@@ -38,9 +81,9 @@ require('packer').startup(function()
             vim.fn["vsnip#anonymous"](args.body)
           end,
         },
-        mapping = {
+        mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        },
+        }),
         sources = {
           { name = 'nvim_lsp' },
         }
@@ -50,7 +93,11 @@ require('packer').startup(function()
 
   use {'ray-x/lsp_signature.nvim',
     config = function()
-      require('lsp_signature').setup()
+      require('lsp_signature').setup{
+        extra_trigger_chars={'{'},
+        --always_trigger = true,
+
+      }
     end,
   }
 
@@ -108,7 +155,9 @@ require('packer').startup(function()
           lualine_z = {'progress', 'location'},
         },
         tabline = {
-          lualine_a = {'buffers'},
+          lualine_a = {{'buffers',
+            max_length = function() return vim.o.columns end
+          }},
         },
       }
     end
@@ -122,6 +171,19 @@ require('packer').startup(function()
           enable = true,
         },
       }
+    end,
+  }
+
+  use {'lewis6991/gitsigns.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = function()
+      require('gitsigns').setup()
+    end,
+  }
+
+  use {'antoinemadec/FixCursorHold.nvim',
+    setup = function()
+      vim.g.cursorhold_updatetime = 1000
     end,
   }
 

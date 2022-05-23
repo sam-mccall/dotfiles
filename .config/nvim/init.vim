@@ -41,9 +41,6 @@ nnoremap ,fs <cmd>Telescope lsp_dynamic_workspace_symbols theme=dropdown<cr>
 nnoremap ,fr <cmd>Telescope lsp_references theme=dropdown<cr>
 
 set updatetime=200
-autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()
-autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()
-autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
 
 imap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)':'<Tab>'
 smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)':'<Tab>'
