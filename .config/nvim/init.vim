@@ -16,6 +16,7 @@ set expandtab tabstop=2 shiftwidth=2 softtabstop=2 smarttab
 set list listchars=tab:▸\ ,trail:·,extends:>,precedes:<
 set ignorecase smartcase
 set incsearch hlsearch
+set signcolumn=yes
 nnoremap <C-_> :nohlsearch<CR>
 nnoremap <C-C> :bd<CR>
 
@@ -26,6 +27,8 @@ nnoremap ,sd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap ,sr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap ,sn <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap ,sa <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap ,sf <cmd>lua vim.lsp.buf.range_formatting({}, vim.api.nvim_win_get_cursor(0), vim.api.nvim_win_get_cursor(0))<CR>
+nnoremap ,st <cmd>lua vim.lsp.buf.type_definition()<CR>
 
 nnoremap ,b :ls<CR>:b 
 nnoremap \ :NvimTreeToggle<CR>
@@ -47,5 +50,5 @@ smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)':'<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)':'<Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)':'<Tab>'
 
-nnoremap <C-PageUp> :bn<CR>
-nnoremap <C-PageDown> :bp<CR>
+nnoremap <C-PageUp> :bp<CR>
+nnoremap <C-PageDown> :bn<CR>
