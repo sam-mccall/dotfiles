@@ -23,7 +23,7 @@
 
 "ui.popup" = { fg = "yellow_faded", bg = "darkgrey" }
 "ui.help" = { fg = "aqua_faded", bg = "#001020" }
-"ui.menu" = { fg = "blue", bg = "#000010" }
+"ui.menu" = { fg = "lightgrey", bg = "#000020" }
 "ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
 
 "ui.virtual.ruler" = { bg= "lightblack" }
@@ -40,7 +40,7 @@
 "punctuation.bracket" = "lightgrey"
 "string"  = "pink"
 "variable.other.member" = "yellow"
-"constant.character.escape" = { fg="blue", modifiers=["reversed"] }
+"constant.character.escape" = { fg="red", modifiers=["reversed"] }
 "function" = "green"
 "constructor" = "green"
 "special" = "green"
@@ -63,29 +63,27 @@
 "diagnostic" = { modifiers = ["underlined"] }
 "diagnostic.warning" = { bg = "darkOrange" }
 "diagnostic.error" = { bg = "darkRed", modifiers = ["bold"] }
-"info" = "blue"
 "hint" = "orange"
 "debug" = "orange"
 "warning" = "orange"
 "error" = "red"
 
 [palette]
-black = "#1c1c1c" # Default Background
-lightblack = "#222222" # Lighter Background (Used for status bars, line number and folding marks)
-darkgrey = "#333333" # Selection Background
+black = "#1c1c1c"
+lightblack = "#222222"
+darkgrey = "#333333"
 grey = "#666666"
 lightgrey = "#a0a0a0"
-white = "#e4e4e4" # Default Foreground, Caret, Delimiters, Operators
-orange = "#dfaf5f" # Comments, Invisibles, Line Highlighting
-darkOrange = "#443300" # Comments, Invisibles, Line Highlighting
-darkRed = "#550000" # Comments, Invisibles, Line Highlighting
-purple = "#cfB7ff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-aqua = "#83c6dd" # Classes, Markup Bold, Search Text Background
-aqua_faded = "#8fd7ff" # Classes, Markup Bold, Search Text Background
-yellow = "#d8d88d" # Strings, Inherited Class, Markup Code, Diff Inserted
+white = "#e4e4e4"
+orange = "#dfaf5f"
+darkOrange = "#443300"
+darkRed = "#550000"
+purple = "#cfB7ff"
+aqua = "#83c6dd"
+aqua_faded = "#8fd7ff"
+yellow = "#d8d88d"
 yellow_faded = "#bbbb99"
-#blue = "#86c1b9" # Support, Regular Expressions, Escape Characters, Markup Quotes
-green = "#86d265" # Functions, Methods, Attribute IDs, Headings
+green = "#86d265"
 green_faded = "#9fb740" 
-red = "#ff0080" # Keywords, Storage, Selector, Markup Italic, Diff Changed
+red = "#ff0080"
 pink = "#eeaacc"
