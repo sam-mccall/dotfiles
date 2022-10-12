@@ -40,7 +40,7 @@
 "punctuation.bracket" = "lightgrey"
 "string"  = "pink"
 "variable.other.member" = "yellow"
-"constant.character.escape" = "base0C"
+"constant.character.escape" = { fg="blue", modifiers=["reversed"] }
 "function" = "green"
 "constructor" = "green"
 "special" = "green"
@@ -49,14 +49,12 @@
 "label" = "pink"
 "namespace" = "pink"
 
-"markup.heading" = "green"
-"markup.list" = "base08"
-"markup.bold" = { fg = "aqua", modifiers = ["bold"] }
-"markup.italic" = { fg = "red", modifiers = ["italic"] }
+"markup.heading" = { fg="green", modifiers = ["bold"]}
+"markup.bold" = { fg = "green", modifiers = ["bold"] }
+"markup.italic" = { fg = "orange", modifiers = ["italic"] }
 "markup.link.url" = { fg = "purple", modifiers = ["underlined"] }
 "markup.link.text" = "base08"
-"markup.quote" = "base0C"
-"markup.raw" = "yellow"
+"markup.quote" = "yellow_faded"
 
 "diff.plus" = "yellow"
 "diff.delta" = "purple"
@@ -79,19 +77,15 @@ grey = "#666666"
 lightgrey = "#a0a0a0"
 white = "#e4e4e4" # Default Foreground, Caret, Delimiters, Operators
 orange = "#dfaf5f" # Comments, Invisibles, Line Highlighting
-darkOrange = "#442200" # Comments, Invisibles, Line Highlighting
+darkOrange = "#443300" # Comments, Invisibles, Line Highlighting
 darkRed = "#550000" # Comments, Invisibles, Line Highlighting
-base04 = "#b8b8b8" # Dark Foreground (Used for status bars)
-base07 = "#f8f8f8" # Light Background (Not often used)
-base08 = "#ab4642" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
 purple = "#cfB7ff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
 aqua = "#83c6dd" # Classes, Markup Bold, Search Text Background
-aqua_faded = "#afe7ff" # Classes, Markup Bold, Search Text Background
+aqua_faded = "#8fd7ff" # Classes, Markup Bold, Search Text Background
 yellow = "#d8d88d" # Strings, Inherited Class, Markup Code, Diff Inserted
 yellow_faded = "#bbbb99"
-base0C = "#86c1b9" # Support, Regular Expressions, Escape Characters, Markup Quotes
+#blue = "#86c1b9" # Support, Regular Expressions, Escape Characters, Markup Quotes
 green = "#86d265" # Functions, Methods, Attribute IDs, Headings
 green_faded = "#9fb740" 
 red = "#ff0080" # Keywords, Storage, Selector, Markup Italic, Diff Changed
 pink = "#eeaacc"
-base0F = "#a16946" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
