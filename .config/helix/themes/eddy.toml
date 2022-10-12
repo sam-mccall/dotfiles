@@ -1,0 +1,97 @@
+"ui.background" = { bg = "black" }
+"ui.text" = { fg = "white"}
+"ui.text.focus" = { fg = "red"}
+"ui.text.info" = { fg = "aqua_faded" }
+
+"ui.selection" = { bg = "darkgrey" }
+"ui.cursor" = { fg = "lightgrey", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "yellow", modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "darkgrey", modifiers = ["underlined", "bold"] }
+
+"ui.gutter" = { bg = "lightblack" }
+"ui.gutter.selected" = { bg = "darkgrey" }
+"ui.linenr" = { fg = "grey", bg = "lightblack" }
+"ui.linenr.selected" = { fg = "lightgrey", bg = "darkgrey", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "lightgrey", bg = "darkgrey" }
+"ui.statusline.inactive" = { fg = "grey", bg = "lightblack" }
+"ui.statusline.normal" = { modifiers=["bold"] }
+"ui.statusline.insert" = { modifiers=["reversed", "bold"] }
+"ui.statusline.select" = { fg="green_faded", modifiers=["reversed", "bold"] }
+"ui.bufferline" = { fg = "lightgrey", bg = "lightblack" }
+"ui.bufferline.active" = { fg = "lightgrey", bg = "darkgrey", modifiers=["bold"] }
+
+"ui.popup" = { fg = "yellow_faded", bg = "darkgrey" }
+"ui.help" = { fg = "aqua_faded", bg = "#001020" }
+"ui.menu" = { fg = "blue", bg = "#000010" }
+"ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
+
+"ui.virtual.ruler" = { bg= "lightblack" }
+
+"ui.window" = { bg = "lightblack" }
+"comment" = { fg = "orange", modifiers = ["italic"] }
+"operator" = { fg = "red", modifiers = ["bold"] }
+"variable" = "yellow"
+"constant" = "pink"
+"attribute" = "orange"
+"type" = { fg="aqua", modifiers=["bold"] }
+"type.builtin" = "aqua_faded"
+"punctuation.delimiter" = "lightgrey"
+"punctuation.bracket" = "lightgrey"
+"string"  = "pink"
+"variable.other.member" = "yellow"
+"constant.character.escape" = "base0C"
+"function" = "green"
+"constructor" = "green"
+"special" = "green"
+"keyword" = { fg = "lightgrey", modifiers = ["bold"] }
+"keyword.storage.modifier" = "aqua_faded"
+"label" = "pink"
+"namespace" = "pink"
+
+"markup.heading" = "green"
+"markup.list" = "base08"
+"markup.bold" = { fg = "aqua", modifiers = ["bold"] }
+"markup.italic" = { fg = "red", modifiers = ["italic"] }
+"markup.link.url" = { fg = "purple", modifiers = ["underlined"] }
+"markup.link.text" = "base08"
+"markup.quote" = "base0C"
+"markup.raw" = "yellow"
+
+"diff.plus" = "yellow"
+"diff.delta" = "purple"
+"diff.minus" = "base08"
+
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.warning" = { bg = "darkOrange" }
+"diagnostic.error" = { bg = "darkRed", modifiers = ["bold"] }
+"info" = "blue"
+"hint" = "orange"
+"debug" = "orange"
+"warning" = "orange"
+"error" = "red"
+
+[palette]
+black = "#1c1c1c" # Default Background
+lightblack = "#222222" # Lighter Background (Used for status bars, line number and folding marks)
+darkgrey = "#333333" # Selection Background
+grey = "#666666"
+lightgrey = "#a0a0a0"
+white = "#e4e4e4" # Default Foreground, Caret, Delimiters, Operators
+orange = "#dfaf5f" # Comments, Invisibles, Line Highlighting
+darkOrange = "#442200" # Comments, Invisibles, Line Highlighting
+darkRed = "#550000" # Comments, Invisibles, Line Highlighting
+base04 = "#b8b8b8" # Dark Foreground (Used for status bars)
+base07 = "#f8f8f8" # Light Background (Not often used)
+base08 = "#ab4642" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+purple = "#cfB7ff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
+aqua = "#83c6dd" # Classes, Markup Bold, Search Text Background
+aqua_faded = "#afe7ff" # Classes, Markup Bold, Search Text Background
+yellow = "#d8d88d" # Strings, Inherited Class, Markup Code, Diff Inserted
+yellow_faded = "#bbbb99"
+base0C = "#86c1b9" # Support, Regular Expressions, Escape Characters, Markup Quotes
+green = "#86d265" # Functions, Methods, Attribute IDs, Headings
+green_faded = "#9fb740" 
+red = "#ff0080" # Keywords, Storage, Selector, Markup Italic, Diff Changed
+pink = "#eeaacc"
+base0F = "#a16946" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
