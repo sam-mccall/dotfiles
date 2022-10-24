@@ -60,11 +60,10 @@
 "diff.delta" = "purple"
 "diff.minus" = "base08"
 
-"diagnostic" = { modifiers = ["underlined"] }
-"diagnostic.warning" = { bg = "darkOrange" }
-"diagnostic.error" = { bg = "darkRed", modifiers = ["bold"] }
-"hint" = "orange"
-"debug" = "orange"
+"diagnostic.info" = { underline = { style="dotted", color="aqua" } }
+"diagnostic.warning" = { bg = "darkOrange", underline = { style="curl", color="yellow" } }
+"diagnostic.error" = { bg = "darkRed", underline = { style="line", color="red" } }
+"info" = "aqua"
 "warning" = "orange"
 "error" = "red"
 
