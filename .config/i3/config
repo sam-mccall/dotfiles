@@ -14,7 +14,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- xsecurelock --nofork
 floating_modifier $mod
 
 bindsym $mod+Shift+l exec loginctl lock-session
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec xfce4-terminal
 bindsym $mod+d exec dmenu_run
 bindsym XF86Display exec "/usr/local/bin/monitor.sh"
 
