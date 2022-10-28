@@ -1,10 +1,6 @@
 export PATH="$HOME/bin:$PATH"
 export BROWSER=google-chrome
 
-# Sakura sets TERM=xterm, but actually is more like xterm-256color.
-if [[ "$(ps -o comm= $PPID)" == "sakura" ]]; then
-  export TERM=xterm-256color
-fi
 if [[ -e "$HOME/.bash_profile.local" ]]; then
   source "$HOME/.bash_profile.local"
 fi
