@@ -1,0 +1,12 @@
+font:
+  size: 9
+  normal:
+    family: Input
+    style: Regular
+colors:
+  primary:
+    background: '#000000'
+    dim_background: '#000000'
+    bright_background: '#000000'
+  normal:
+    black: '#000000'
