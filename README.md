@@ -7,15 +7,12 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 The following packages are required:
 
-   - xmonad
+   - i3
    - fish
    - suckless-tools
    - feh
    - xscreensaver
-   - stalonetray
-   - xmobar
    - rxvt-unicode-256color
-   - xbacklight
    - xss-lock
    - xcape
    - wireless-tools
@@ -24,13 +21,3 @@ And custom installs:
 
    - ~/background.jpg
    - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
-   - [re-search](https://github.com/jbonjean/re-search)
-
-Vim setup requires:
-  - [pathogen](https://github.com/tpope/vim-pathogen)
-  - vim-monokai
-  - vim-airline
-  - nerdtree
-  - vim-bbye
-  - vim-fish
-  - vim-signify
