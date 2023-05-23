@@ -17,3 +17,9 @@ separator = "▏"
 normal = "block"
 insert = "bar"
 select = "block"
+
+[editor.file-picker]
+max-depth = 0
+
+[editor.lsp]
+display-inlay-hints = true

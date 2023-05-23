@@ -27,6 +27,7 @@
 "ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
 
 "ui.virtual.ruler" = { bg= "lightblack" }
+"ui.virtual.inlay-hint" = { bg = "darkgrey", fg = "lightgrey" }
 
 "ui.window" = { bg = "lightblack" }
 "comment" = { fg = "orange", modifiers = ["italic"] }
