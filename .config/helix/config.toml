@@ -6,6 +6,9 @@ rulers = [80]
 color-modes = true
 bufferline = "multiple"
 true-color = true
+auto-pairs = false
+completion-trigger-len = 0
+idle-timeout = 0
 
 [editor.statusline]
 left = ["mode", "separator", "file-type", "diagnostics"]
@@ -23,3 +26,10 @@ max-depth = 0
 
 [editor.lsp]
 display-inlay-hints = true
+goto-reference-include-declaration = false
+
+[keys.normal]
+C-h = ":toggle lsp.display-inlay-hints"
+
+[keys.insert]
+C-h = ":toggle lsp.display-inlay-hints"
