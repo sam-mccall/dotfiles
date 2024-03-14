@@ -5,19 +5,21 @@ These are my dotfiles. There are many like them, but these ones are mine.
     cfg config status.showUntrackedFiles no
     cfg checkout
 
+Extra things (automate?):
+
+   - symlink things in ~/.global into place
+   - `sysctl enable udevmon`
+
 The following packages are required:
 
-   - i3
+   - sway
+   - i3-status
    - fish
    - suckless-tools
-   - feh
-   - xscreensaver
-   - rxvt-unicode-256color
-   - xss-lock
-   - xcape
+   - foot
+   - udevmon
    - wireless-tools
 
 And custom installs:
 
-   - ~/background.jpg
-   - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
+   - ~/bg.jpg

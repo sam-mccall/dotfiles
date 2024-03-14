@@ -9,21 +9,14 @@ xkb_keymap {
   xkb_types { include "complete" };
   xkb_compat {
     include "complete"
-    interpret Control_L { action = SetControls(controls=overlay1+mousekeys); };
   };
   xkb_symbols {
     // Based on dvorak. Include any media keys present.
     include "pc+us(dvorak)+inet(evdev)"
 
-    // Modifiers:
-    // - caps lock is control
-    // - control keys trigger "extend" overlay. FIXME: not working
-    // - left alt is backspace
-    replace key <CAPS> { [Caps_Lock], actions=[SetMods(modifiers=Control)] };
     replace key <LALT> { [BackSpace] };
-    replace modifier_map Control { <CAPS> };
-    key <LCTL> { [Multi_key] };
 
+    // FIXME: overlays not working.
     // Right overlay cluster:
     //  - Arrows
     //  - Home/End
