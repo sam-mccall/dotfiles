@@ -1,0 +1,3 @@
+evdev:input:b*v047Dp2041*
+  KEYBOARD_KEY_ff000001=btn_side
+  KEYBOARD_KEY_ff000002=btn_middle
