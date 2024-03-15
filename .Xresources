@@ -46,6 +46,7 @@ Xft.antialias:                 true
 Xft.hinting:                   true
 Xft.hintstyle:                 hintslight
 Xft.rgba:                      rgb
+Xft.dpi: 324
 
 urxvt*perl-ext-common:        default,matcher
 
