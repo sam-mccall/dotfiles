@@ -1,7 +1,7 @@
 set $mod Mod4
 set $term foot
 set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $locker swaylock -i ~/Pictures/bg.jpg -e --ring-color 444444 --ring-ver-color 444444 --key-hl-color aaaaaa --inside-ver-color aaaaaa88 --text-ver-color 00000000 --text-clear-color 00000000 --text-wrong-color 00000000
+set $locker swaylock
 
 set $left h
 set $down t
