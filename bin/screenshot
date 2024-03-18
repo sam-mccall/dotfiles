@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+workspace=$(hyprctl -j activeworkspace | jq .id)
+filter_workspace="select( .workspace.id == $workspace )"
+format_rect='"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1]) \(.title)"'
+extract_workspace_rects=". | map($filter_workspace) | map($format_rect) | .[]"
+region=$(hyprctl -j clients | jq -r "$extract_workspace_rects" | slurp)
+out="$HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
+grim -g "$region" -s 1 $out -f test
+wl-copy $out
+notify-send "$(basename $out)"$'\n'"(path copied)"
