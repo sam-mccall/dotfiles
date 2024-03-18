@@ -1,0 +1,39 @@
+window {
+  font-family: Quicksand, sans-serif;
+  background: none;
+  color: rgb(200,240,255);
+}
+.modules-left, .modules-right {
+  font-weight: bold;
+}
+.modules-right widget > * {
+  padding: 0 10px; 
+  border-top-left-radius: 10px;
+}
+.modules-right widget:nth-last-child(1) > * { background-color: rgba(55, 112, 228, 0.5); }
+.modules-right widget:nth-last-child(2) > *, .modules-right widget:nth-last-child(1), #workspaces { background-color: rgba(27, 68, 194, 0.5); }
+.modules-right widget:nth-last-child(3) > *, .modules-right widget:nth-last-child(2) { background-color: rgba(10, 40, 170, 0.5); }
+
+#workspaces button.active {
+  background-color: rgba(55,112,228,0.7);
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#workspaces button.active:first-child {
+  border-top-left-radius: 0;
+}
+#workspaces {
+  border-top-right-radius: 10px;
+}
+
+#window {
+  background-color: rgba(0,0,0,0.6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0 50px;
+  color: white;
+}
+.error {
+  color: #ff6600;
+}
