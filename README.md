@@ -17,6 +17,7 @@ The following packages are required:
    - foot
    - wl-clipboard
    - cliphist
+   - dunst
    - swayidle
    - swaybg
    - waybar

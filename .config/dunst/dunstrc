@@ -1,0 +1,31 @@
+[global]
+monitor=1
+origin=bottom-right
+offset=0x10
+width = 400
+
+frame_width=4
+gap_size=10
+corner_radius=15
+
+font=Helvetica 12
+line_height=5
+
+mouse_left_click=do_action,close_current
+mouse_right_click=close_current
+mouse_middle_click=close_all
+
+[urgency_normal]
+background="#000000cc"
+foreground="#ffeedd"
+frame_color="#000000"
+
+[urgency_low]
+background="#004411cc"
+foreground="#ddffee"
+frame_color="#008800"
+
+[urgency_critical]
+background="#900000cc"
+foreground="#eeeeee"
+frame_color="#880000"
