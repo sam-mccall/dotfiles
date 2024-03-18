@@ -8,13 +8,22 @@ set $down t
 set $up n
 set $right s
 
-font pango:monospace 5
-default_border normal 1
-output * bg ~/Pictures/bg.jpg fill
-output * scale 1.5
-input "type:keyboard" {
-  xkb_file ~/keyboard.xkb
+for_window [floating] resize set height 30px
+
+font pango:monospace 7
+default_border pixel 2
+hide_edge_borders both
+output * {
+  bg ~/Pictures/bg.jpg fill
+  scale 2.0
 }
+output "Google Inc. P2718EC C8030177" {
+  scale 1.0
+  transform 270
+  bg ~/Pictures/bg2.jpg fill
+}
+input "type:keyboard" xkb_file ~/keyboard.xkb
+input "1149:8257:Kensington_Kensington_Slimblade_Trackball" scroll_method on_button_down
 
 floating_modifier $mod inverse
 
