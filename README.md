@@ -13,11 +13,11 @@ Extra things (automate?):
 
 The following packages are required:
 
-   - sway
-   - i3-status
    - fish
-   - suckless-tools
    - foot
+   - wl-clipboard
+   - waybar
+   - wofi
    - udevmon
    - wireless-tools
    - interception-tools
