@@ -2,4 +2,5 @@ stylesheet=style.css
 allow_images=true
 no_actions=true
 normal_window=true
+width=600
 prompt=
