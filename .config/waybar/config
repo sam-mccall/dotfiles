@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "position": "bottom",
-    "include": "config.local",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["custom/gcert", "battery", "clock"],
