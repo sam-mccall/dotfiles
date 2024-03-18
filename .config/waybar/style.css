@@ -1,7 +1,9 @@
-window {
+* {
   font-family: Quicksand, sans-serif;
-  background: none;
   color: rgb(200,240,255);
+}
+window {
+  background: none;
 }
 .modules-left, .modules-right {
   font-weight: bold;

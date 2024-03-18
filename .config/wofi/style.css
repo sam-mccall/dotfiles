@@ -22,7 +22,8 @@ image { color:rgba(0,0,0,0); }
     margin-bottom: 1.5em;
 }
 #entry {
-  background-color: rgba(100,100,100,0.7);
+  background-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
   padding: 10px;
 }
 #entry image {
@@ -43,27 +44,3 @@ image { color:rgba(0,0,0,0); }
     outline-style: none;
 }
 
-/*
- 
-#inner-box {
-    background-color: @base3;
-    margin: 0 10em;
-}
- 
-#outer-box {
-    background-color: rgba(0,0,0,0.5);
-}
- 
-#text {
-    padding: 5px;
-    color: @highlight;
-}
- 
-#entry:nth-child() {
-    color: @base1;
-}
- 
-#entry:selected {
-    border: 2px solid @highlight;
-}
-*/

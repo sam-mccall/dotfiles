@@ -8,6 +8,7 @@
     "sway/window": {
         "max-length": 50
     },
+    "output": ["DP-1", "eDP-1"],
     "battery": {
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ⚡",
