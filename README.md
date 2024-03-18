@@ -16,6 +16,9 @@ The following packages are required:
    - fish
    - foot
    - wl-clipboard
+   - cliphist
+   - swayidle
+   - swaybg
    - waybar
    - wofi
    - udevmon
