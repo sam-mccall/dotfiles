@@ -1,7 +1,7 @@
 "ui.background" = { bg = "black" }
-"ui.text" = { fg = "white"}
+"ui.text" = { fg = "white" }
 "ui.text.focus" = { fg = "red"}
-"ui.text.info" = { fg = "aqua_faded" }
+"ui.text.info" = { fg = "white" }
 
 "ui.selection" = { bg = "darkgrey" }
 "ui.cursor" = { fg = "lightgrey", modifiers = ["reversed"] }
@@ -12,6 +12,7 @@
 "ui.gutter.selected" = { bg = "darkgrey" }
 "ui.linenr" = { fg = "grey", bg = "lightblack" }
 "ui.linenr.selected" = { fg = "lightgrey", bg = "darkgrey", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "darkgrey" }
 
 "ui.statusline" = { fg = "lightgrey", bg = "darkgrey" }
 "ui.statusline.inactive" = { fg = "grey", bg = "lightblack" }
@@ -21,13 +22,15 @@
 "ui.bufferline" = { fg = "lightgrey", bg = "lightblack" }
 "ui.bufferline.active" = { fg = "lightgrey", bg = "darkgrey", modifiers=["bold"] }
 
-"ui.popup" = { fg = "yellow_faded", bg = "darkgrey" }
+"ui.popup" = { fg = "grey", bg = "#222230" }
 "ui.help" = { fg = "aqua_faded", bg = "#001020" }
-"ui.menu" = { fg = "lightgrey", bg = "#000020" }
+"ui.menu" = { fg = "#d0d0a0", bg = "#222230" }
 "ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
 
+"ui.picker" = {bg = "darkRed"}
+
 "ui.virtual.ruler" = { bg= "lightblack" }
-"ui.virtual.inlay-hint" = { bg = "darkgrey", fg = "lightgrey" }
+"ui.virtual.inlay-hint" = { fg = "grey" }
 
 "ui.window" = { bg = "lightblack" }
 "comment" = { fg = "orange", modifiers = ["italic"] }
@@ -51,33 +54,37 @@
 "namespace" = "pink"
 
 "markup.heading" = { fg="green", modifiers = ["bold"]}
+"markup.raw.inline" = { fg="yellow", modifiers = ["bold"]}
 "markup.bold" = { fg = "green", modifiers = ["bold"] }
 "markup.italic" = { fg = "orange", modifiers = ["italic"] }
 "markup.link.url" = { fg = "purple", modifiers = ["underlined"] }
-"markup.link.text" = "base08"
+"markup.link.text" = "red"
 "markup.quote" = "yellow_faded"
 
 "diff.plus" = "yellow"
 "diff.delta" = "purple"
-"diff.minus" = "base08"
+"diff.minus" = "red"
 
-"diagnostic.info" = { underline = { style="dotted", color="aqua" } }
-"diagnostic.warning" = { bg = "darkOrange", underline = { style="curl", color="yellow" } }
-"diagnostic.error" = { bg = "darkRed", underline = { style="line", color="red" } }
-"info" = "aqua"
-"warning" = "orange"
-"error" = "red"
+"diagnostic.hint" = { underline = { style="line", color="grey" } }
+"diagnostic.info" = { underline = { style="line", color="aqua" } }
+"diagnostic.warning" = { underline = { style="curl", color="yellow" } }
+"diagnostic.error" = { underline = { style="curl", color="red" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"hint" = {fg="gray", modifiers = ["bold","italic"]}
+"info" = {fg="aqua", modifiers = ["bold","italic"]}
+"error" = {fg="darkRed", modifiers = ["bold","italic"]}
+"warning" = {fg="orange", modifiers = ["bold","italic"]}
 
 [palette]
 black = "#1c1c1c"
 lightblack = "#222222"
 darkgrey = "#333333"
-grey = "#666666"
+grey = "#777777"
 lightgrey = "#a0a0a0"
 white = "#e4e4e4"
 orange = "#dfaf5f"
 darkOrange = "#443300"
-darkRed = "#550000"
+darkRed = "#c02060"
 purple = "#cfB7ff"
 aqua = "#83c6dd"
 aqua_faded = "#8fd7ff"
