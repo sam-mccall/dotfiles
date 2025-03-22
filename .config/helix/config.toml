@@ -1,14 +1,18 @@
 theme = "eddy"
 
 [editor]
+undercurl = true
 cursorline = true
-rulers = [80]
+rulers = [80, 100]
 color-modes = true
-bufferline = "multiple"
+bufferline = "always"
 true-color = true
 auto-pairs = false
 completion-trigger-len = 0
 idle-timeout = 0
+end-of-line-diagnostics = "hint"
+preview-completion-insert = false
+popup-border = "popup"
 
 [editor.statusline]
 left = ["mode", "separator", "file-type", "diagnostics"]
@@ -33,3 +37,6 @@ C-h = ":toggle lsp.display-inlay-hints"
 
 [keys.insert]
 C-h = ":toggle lsp.display-inlay-hints"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
