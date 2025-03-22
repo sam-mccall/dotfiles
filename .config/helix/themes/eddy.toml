@@ -1,6 +1,6 @@
 "ui.background" = { bg = "black" }
-"ui.text" = { fg = "white" }
-"ui.text.focus" = { fg = "red"}
+"ui.text" = { fg = "darkwhite" }
+"ui.text.focus" = { fg = "aqua", modifiers = ["bold"] }
 "ui.text.info" = { fg = "white" }
 "ui.text.directory" = { fg = "grey", modifiers = ["bold"] }
 
@@ -29,7 +29,8 @@
 "ui.menu" = { fg = "yellow_faded", bg = "slate" }
 "ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
 
-"ui.picker" = {bg = "slate"}
+"ui.picker" = {fg = "darkOrange", bg = "slate", modifiers = ["bold", "italic"]}
+"ui.highlight" = {bg = "darkgrey"}
 
 "ui.virtual.ruler" = { bg= "lightblack" }
 "ui.virtual.inlay-hint" = { fg = "grey" }
@@ -78,12 +79,13 @@
 "warning" = {fg="darkOrange", modifiers = ["bold","italic"]}
 
 [palette]
-black = "#1c1c1c"
-lightblack = "#222222"
-darkgrey = "#333333"
-grey = "#777777"
-lightgrey = "#a0a0a0"
 white = "#e4e4e4"
+darkwhite = "#c0c0c0"
+lightgrey = "#a0a0a0"
+grey = "#777777"
+darkgrey = "#333333"
+lightblack = "#222222"
+black = "#1c1c1c"
 orange = "#dfaf5f"
 darkOrange = "#bb6600"
 purple = "#cfB7ff"
@@ -96,4 +98,4 @@ green_faded = "#9fb740"
 red = "#ff0080"
 darkRed = "#e03060"
 pink = "#eeaacc"
-slate = "#222230"
+slate = "#222228"
