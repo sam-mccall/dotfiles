@@ -2,8 +2,10 @@
 "ui.text" = { fg = "white" }
 "ui.text.focus" = { fg = "red"}
 "ui.text.info" = { fg = "white" }
+"ui.text.directory" = { fg = "grey", modifiers = ["bold"] }
 
-"ui.selection" = { bg = "darkgrey" }
+"ui.selection" = { bg = "darkgrey", modifiers=["bold"], underline = {style = "line", color = "white"} }
+"ui.selection.primary" = { bg = "darkgrey", modifiers= ["bold"] }
 "ui.cursor" = { fg = "lightgrey", modifiers = ["reversed"] }
 "ui.cursor.primary" = { fg = "yellow", modifiers = ["reversed"] }
 "ui.cursor.match" = { bg = "darkgrey", modifiers = ["underlined", "bold"] }
@@ -12,7 +14,7 @@
 "ui.gutter.selected" = { bg = "darkgrey" }
 "ui.linenr" = { fg = "grey", bg = "lightblack" }
 "ui.linenr.selected" = { fg = "lightgrey", bg = "darkgrey", modifiers = ["bold"] }
-"ui.cursorline.primary" = { bg = "darkgrey" }
+"ui.cursorline.primary" = { bg = "lightblack" }
 
 "ui.statusline" = { fg = "lightgrey", bg = "darkgrey" }
 "ui.statusline.inactive" = { fg = "grey", bg = "lightblack" }
@@ -22,12 +24,12 @@
 "ui.bufferline" = { fg = "lightgrey", bg = "lightblack" }
 "ui.bufferline.active" = { fg = "lightgrey", bg = "darkgrey", modifiers=["bold"] }
 
-"ui.popup" = { fg = "grey", bg = "#222230" }
+"ui.popup" = { fg = "grey", bg = "slate" }
 "ui.help" = { fg = "aqua_faded", bg = "#001020" }
-"ui.menu" = { fg = "#d0d0a0", bg = "#222230" }
+"ui.menu" = { fg = "yellow_faded", bg = "slate" }
 "ui.menu.selected" = { fg = "aqua", modifiers=["bold"] }
 
-"ui.picker" = {bg = "darkRed"}
+"ui.picker" = {bg = "slate"}
 
 "ui.virtual.ruler" = { bg= "lightblack" }
 "ui.virtual.inlay-hint" = { fg = "grey" }
@@ -73,7 +75,7 @@
 "hint" = {fg="gray", modifiers = ["bold","italic"]}
 "info" = {fg="aqua", modifiers = ["bold","italic"]}
 "error" = {fg="darkRed", modifiers = ["bold","italic"]}
-"warning" = {fg="orange", modifiers = ["bold","italic"]}
+"warning" = {fg="darkOrange", modifiers = ["bold","italic"]}
 
 [palette]
 black = "#1c1c1c"
@@ -83,14 +85,15 @@ grey = "#777777"
 lightgrey = "#a0a0a0"
 white = "#e4e4e4"
 orange = "#dfaf5f"
-darkOrange = "#443300"
-darkRed = "#c02060"
+darkOrange = "#bb6600"
 purple = "#cfB7ff"
 aqua = "#83c6dd"
 aqua_faded = "#8fd7ff"
 yellow = "#d8d88d"
-yellow_faded = "#bbbb99"
+yellow_faded = "#bbbbaa"
 green = "#86d265"
 green_faded = "#9fb740" 
 red = "#ff0080"
+darkRed = "#e03060"
 pink = "#eeaacc"
+slate = "#222230"

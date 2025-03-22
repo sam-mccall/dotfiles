@@ -31,6 +31,8 @@ max-depth = 0
 [editor.lsp]
 display-inlay-hints = true
 goto-reference-include-declaration = false
+display-progress-messages	= true
+snippets = false
 
 [keys.normal]
 C-h = ":toggle lsp.display-inlay-hints"
