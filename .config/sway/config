@@ -3,12 +3,20 @@ set $term foot
 set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $locker swaylock
 
+exec dunst
+exec foot
+exec swayidle
+exec nm-applet --indicator
+
 set $left h
 set $down t
 set $up n
 set $right s
 
-for_window [floating] resize set height 30px
+bar {
+  position bottom 
+  status_command i3status
+}
 
 font pango:monospace 7
 default_border pixel 2
@@ -35,7 +43,6 @@ bindsym $mod+Shift+l exec $locker
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec swaynag -t warning -m 'Exit sway?' -B 'Exit' 'swaymsg exit'
 
-exec swayidle -w timeout 120 '$locker'
 
 # change focus
 bindsym $mod+$left focus left
@@ -93,9 +100,5 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
-
-bar {
-        status_command i3status
-}
 
 include @sysconfdir@/sway/config.d/*
