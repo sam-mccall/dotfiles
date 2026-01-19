@@ -23,20 +23,19 @@ The following packages are required:
    - waybar
    - wofi
    - udevmon
+   - suckless-tools
    - wireless-tools
    - interception-tools
 
 Manual installs:
 
-   - `sudo apt install libyaml-cpp-dev`
-   - https://gitlab.com/interception/linux/plugins/dual-function-keys.git
+   - tap keys
+      - https://gitlab.com/interception/linux/plugins/dual-function-keys.git
+      - `sudo apt install libyaml-cpp-dev`
+      - `sudo cp ~/.config/interception/dual-function-keys.yaml /etc/interception`
+      - `sudo cp ~/.config/interception/udevmon.d/dual-function.yaml /etc/interception/udevmon.d`
    - `mkdir -p ~/.config/systemd/user/default.target.wants`
    - `ln -s /usr/lib/systemd/user/ssh-agent.service ~/.config/systemd/user/default.target.wants/`
-
-Hyprland:
-   - `sudo apt install libtomlplusplus-dev libpango1.0-dev libzip-dev librsvg2-dev libliftoff-dev libgbm-dev libdisplay-info-dev hwdata libsystemd-dev`
-   - https://github.com/hyprwm/hyprlang.git
-   - https://github.com/hyprwm/hyprcursor.git
 
 Set up global things:
 

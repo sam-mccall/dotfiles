@@ -18,7 +18,7 @@ bar {
   status_command i3status
 }
 
-font pango:monospace 7
+font pango:Input 8
 default_border pixel 2
 hide_edge_borders both
 output * {
@@ -29,6 +29,9 @@ output "Google Inc. P2718EC C8030177" {
   scale 1.0
   transform 270
   bg ~/Pictures/bg2.jpg fill
+}
+output "BOE 0x0C00 Unknown" {
+  scale 1.0
 }
 input "type:keyboard" xkb_file ~/keyboard.xkb
 input "1149:8257:Kensington_Kensington_Slimblade_Trackball" scroll_method on_button_down
